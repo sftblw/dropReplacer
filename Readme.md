@@ -10,6 +10,8 @@ Caution: It preserves file extension.
   - [x] drag-drop
   - [x] rename by regex
 - [ ] Check regex
+  - [ ] is valid regex?
+  - [ ] is valid file name?
 - [ ] A neat progress bar
 - [ ] Cleaner look
 - [ ] Log renamed files
