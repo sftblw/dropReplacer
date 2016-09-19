@@ -9,6 +9,8 @@ Caution: It preserves file extension.
 - [x] Basic oh basic feature
   - [x] drag-drop
   - [x] rename by regex
+- [x] Show dragging files match info
+  - [ ] fix flickering number issues due to events of child elements
 - [ ] Check regex
   - [ ] is valid regex?
   - [ ] is valid file name?

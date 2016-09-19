@@ -6,7 +6,11 @@ h1 {border-bottom: 1px solid gray; margin-bottom: .5em;}
 h1 img.logo {margin-right: .3em; width:1.5em; height: 1.5em;}
 div.item {margin-bottom: .5em;}
 
-/* input boxes */
+/* dragging file info */
+.fileinfo ul {list-style: none;}
+.fileinfo span.numb {font-size: 1.5em;}
+
+/* regex input boxes */
 .regex input[type='text'] {
   font-family: consolas, monospace;
   font-size: 1.5em;

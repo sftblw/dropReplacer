@@ -4,7 +4,6 @@ const renamer = require('../lib/renamer.js');
 const uiinfo = require('../lib/uiinfo.js');
 
 window.addEventListener('load', (loadev) => {
-  let isDragFinished = false;
   document.addEventListener('dragover', (ev) => {
     ev = ev || event;
     ev.preventDefault();
