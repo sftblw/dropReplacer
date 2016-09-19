@@ -2,19 +2,30 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>dropReplacer - main</title>
+    <title>DropReplacer</title>
     <link rel="stylesheet" href="../style/style.css">
   </head>
   <body>
-    <ul>
-      <li> input regex: <input type="text" id="inputRegex" class="regex" value="(.*)"/></li>
-      <li>output regex: <input type="text" id="outputRegex" class="regex" value="$1 (renamed)"/></li>
+    <h1><image class="logo" src="../images/dropReplacer_logo.png">Drag-drop files to rename</h1>
+    <div class="fileInfo">
+    </div>
+    <div class="regex">
+      <div class="item">
+        <label>Input regular expression</label>
+        <input type="text" id="inputRegex" value="(.*)"/>
+      </div>
+      <div class="item">
+        <label>Output renaming rule</label>
+        <input type="text" id="outputRegex" value="$1 (renamed)"/>
+      </div>
     </ul>
+    </div>
+    <div class="history">
+    </div>
 
   </body>
 
   <script>
-    // You can also require other files to run in this process
     require('../renderer/index.js')
   </script>
 </html>

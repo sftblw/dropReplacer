@@ -1,3 +1,16 @@
-input.regex {
+*, div { margin: 0; padding: 0; font-family: Arial;}
+
+/* design */
+body {padding: 1em;}
+h1 {border-bottom: 1px solid gray; margin-bottom: .5em;}
+h1 img.logo {margin-right: .3em; width:1.5em; height: 1.5em;}
+div.item {margin-bottom: .5em;}
+
+/* input boxes */
+.regex input[type='text'] {
   font-family: consolas, monospace;
+  font-size: 1.5em;
+  width: 100%;
+  box-sizing: border-box;;
 }
+.regex label {display: block;}
