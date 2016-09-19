@@ -13,7 +13,7 @@ Caution: It preserves file extension.
   - [ ] is valid regex?
   - [ ] is valid file name?
 - [ ] A neat progress bar
-- [ ] Cleaner look
+- [x] Cleaner look
 - [ ] Log renamed files
 - [ ] Undo
   - [ ] undo with main UI
