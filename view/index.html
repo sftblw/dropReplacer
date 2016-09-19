@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>dropReplacer - main</title>
+    <link rel="stylesheet" href="../style/style.css">
+  </head>
+  <body>
+    <ul>
+      <li> input regex: <input type="text" id="inputRegex" class="regex" value="(.*)"/></li>
+      <li>output regex: <input type="text" id="outputRegex" class="regex" value="$1 (renamed)"/></li>
+    </ul>
+
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('../renderer/index.js')
+  </script>
+</html>
