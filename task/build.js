@@ -9,7 +9,7 @@ packager({
   out: 'build',
   platform: 'win32',
   prune: true,
-  ignore: /(build|.gitignore|.gidmodules|res_bin|task)/,
+  ignore: /(build|.gitignore|.gidmodules|res_bin|task|doc)/,
   icon: 'res_bin/dropReplacer_icon.ico'
 }, (err, appPaths) => {
   if (err) console.error(err);
