@@ -117,9 +117,13 @@ function GenInputRegexHTML(text, parent) {
                         element.classList.add('brace');
                         elementList.push(element);
 
-                        let braceStart = braceStack.pop();
-                        braceStart.braceEnd = element;
-                        element.braceStart = braceStart;
+                        if (braceStack.length === 0) {
+                            element.className = 'error';
+                        } else {
+                            let braceStart = braceStack.pop();
+                            braceStart.braceEnd = element;
+                            element.braceStart = braceStart;
+                        }
                     } break;
                     default : {
                         element.innerHTML = text [i];
