@@ -18,11 +18,19 @@
     <div class="regex">
       <div class="item">
         <label>Input regular expression (excludes extension)</label>
-        <input type="text" id="inputRegex" value="(.*)"/>
+        <div class="highlightWrap inputRegex">
+          <input type="text" id="inputRegex" value="(.*)"/>
+          <pre><div class="highlight">(.*)</div></pre>
+        </div>
       </div>
       <div class="item">
         <label>Output renaming rule</label>
-        <input type="text" id="outputRegex" value="$1 (renamed)"/>
+        <div class="highlightWrap outputRegex">
+          <input type="text" id="outputRegex" value="$1 (renamed)"/>
+          <pre>
+          <div class="highlight">(.*)</div>
+          </pre>
+        </div>
       </div>
     </ul>
     </div>
