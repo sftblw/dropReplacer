@@ -78,15 +78,15 @@ function GenInputRegexHTML(text, parent) {
                     elementList.push(element);
                     mode = 'normal';
                     break;
-                } else {
-                    i++;
                 }
+
                 // https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals
                 switch (text[i]) {
                     case '0': case 'b': case 'f': case 'n': case 'r': case 't': case 'v': case '\'': case '"': case '\\': {
-                        element.innerHTML = text[i - 1] + text [i];
+                        element.innerHTML = text[i] + text[i + 1];
                         element.classList.add('escape');
                         elementList.push(element);
+                        i += 1;
                     } break;
                     // case 'x': {
 
@@ -95,12 +95,14 @@ function GenInputRegexHTML(text, parent) {
                         
                     // } break;
                     default: {
-                        element.innerHTML = text[i - 1] + text [i];
+                        element.innerHTML = text[i] + text[i + 1];
+                        element.classList.add('escape');
                         elementList.push(element);
+                        i += 1;
                     } break;
                 }
                 mode = 'normal';
-            }
+            } break;
             case 'brace': {
                 switch (text[i]) {
                     case '(': {
@@ -122,7 +124,7 @@ function GenInputRegexHTML(text, parent) {
                     default : {
                         element.innerHTML = text [i];
                         elementList.push(element);
-                    }
+                    } break;
                 }
                 mode = 'normal';
             }
