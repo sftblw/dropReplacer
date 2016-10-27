@@ -1,4 +1,5 @@
 # dropReplacer
+
 ![showcase](./doc/showcase.gif)
 
 Rename drag-dropped files by regular expression (regex).
@@ -7,7 +8,8 @@ A simple electron app. currently tested only on windows.
 
 Caution: It preserves file extension.
 
-# todo
+## todo
+
 - [x] Basic oh basic feature
   - [x] drag-drop
   - [x] rename by regex
@@ -29,13 +31,13 @@ Caution: It preserves file extension.
 - [ ] Resize images to fit below specific size?
 - [x] Icon for packaged binary
 
-# dev
+## dev
 
 only some npm commands.
 
 - `npm start` : Test. run `electron-prebuilt` for testing app.
 - `npm run build` : Make excutables. run `electron-packager` for windows.
 
-# etc
+## etc
 
 Yes, It's just a program for tagging anime-names into anime-captured images! XD
