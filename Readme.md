@@ -14,6 +14,9 @@ Caution: It preserves file extension.
 - [x] Show dragging files match info
   - [ ] fix flickering number issues due to events of child elements
 - [ ] Check regex
+  - [ ] highlight regex
+    - [x] brace
+    - [x] escape sequence - basic
   - [ ] is valid regex?
   - [ ] is valid file name?
   - [ ] escape invalid renaming rules to right ones
