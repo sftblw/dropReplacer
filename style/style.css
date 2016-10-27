@@ -34,6 +34,10 @@ div.item {margin-bottom: .5em;}
   font-size: 1.5em;
   position: absolute;
   top: 0; left: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
 }
 .regex div.highlightWrap div.highlight span {
   font-family: inherit;
