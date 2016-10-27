@@ -54,3 +54,6 @@ div.item {margin-bottom: .5em;}
 .regex div.highlightWrap div.highlight span.brace {
   color: darkblue;
 }
+.regex div.highlightWrap div.highlight span.match {
+  color: darkorange;
+}
