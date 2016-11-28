@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>dropReplacer</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css">
   </head>
   <body>
     <h1><image class="logo" src="../images/dropReplacer_logo.png">Drag-drop files to rename</h1>
@@ -18,19 +19,12 @@
     <div class="regex">
       <div class="item">
         <label>Input regular expression (excludes extension)</label>
-        <div class="highlightWrap inputRegex">
-          <pre><div class="highlight">(.*)</div></pre>
-          <input type="text" id="inputRegex" value="(.*)"/>
-        </div>
+        <textarea class="inputRegex">wow</textarea>
       </div>
       <div class="item">
         <label>Output renaming rule</label>
-        <div class="highlightWrap outputRegex">
-          <pre><div class="highlight">$1 (renamed)</div></pre>
-          <input type="text" id="outputRegex" value="$1 (renamed)"/>
-        </div>
+        <textarea class="outputRegex">wow</textarea>
       </div>
-    </ul>
     </div>
     <div class="history">
     </div>
@@ -38,6 +32,7 @@
   </body>
 
   <script>
-    require('../renderer/index.js')
+    'use strict';
+    require('../renderer/index.js');
   </script>
 </html>
