@@ -11,49 +11,8 @@ div.item {margin-bottom: .5em;}
 .fileinfo span.numb {font-size: 1.5em;}
 
 /* regex input boxes */
-.regex input[type='text']  {
-  font-family: consolas, monospace;
-  font-size: 1.5em;
-  width: 100%;
-  -webkit-text-fill-color: transparent;
-  box-sizing: border-box;
-  border: 2px solid lightgray;
+.regex .CodeMirror  {
+  height: auto;
+  border: 1px solid grey;
 }
 
-.regex label {display: block;}
-
-.regex div.highlightWrap {
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
- }
-
-.regex div.highlightWrap div.highlight {
-  border: 2px solid transparent;
-  font-family: consolas, monospace;
-  font-size: 1.5em;
-  position: absolute;
-  top: 0; left: 0;
-
-  user-select: none;
-  -webkit-user-select: none;
-  pointer-events: none;
-}
-.regex div.highlightWrap div.highlight span {
-  font-family: inherit;
-}
-
-/* regex highlight */
-.regex div.highlightWrap div.highlight span.escape {
-  color: purple;
-}
-.regex div.highlightWrap div.highlight span.error {
-  color: white;
-  background: red;
-}
-.regex div.highlightWrap div.highlight span.brace {
-  color: darkblue;
-}
-.regex div.highlightWrap div.highlight span.match {
-  color: darkorange;
-}
