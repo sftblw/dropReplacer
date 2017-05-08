@@ -20,6 +20,8 @@ div.item {margin-bottom: .5em;}
   border: 2px solid lightgray;
 }
 
+.regex h2 { font-weight: normal; border-bottom: 1px solid lightgray; margin: .5em 0 .5em 0; }
+
 .regex label {display: block;}
 
 .regex .option { list-style: none; padding: .5em; }
