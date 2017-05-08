@@ -6,13 +6,13 @@ Rename drag-dropped files by regular expression (regex).
 
 A simple electron app. currently tested only on windows.
 
-Caution: It preserves file extension.
-
 ## todo
 
 - [x] Basic oh basic feature
   - [x] drag-drop
   - [x] rename by regex
+- [ ] options
+  - [x] include or exclude extension
 - [x] Show dragging files match info
   - [ ] fix flickering number issues due to events of child elements
 - [ ] Check regex
