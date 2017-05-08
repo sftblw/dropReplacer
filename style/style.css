@@ -22,6 +22,16 @@ div.item {margin-bottom: .5em;}
 
 .regex label {display: block;}
 
+.regex .option { list-style: none; padding: .5em; }
+.regex .option label {
+  display: inline-block;
+  border: 2px solid lightgray;
+  padding: .5em; margin: .5em;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.regex .option input[type="checkbox"] { display: inline-block; padding-right: .5em; }
+
 .regex div.highlightWrap {
   box-sizing: border-box;
   position: relative;
@@ -39,6 +49,7 @@ div.item {margin-bottom: .5em;}
   -webkit-user-select: none;
   pointer-events: none;
 }
+
 .regex div.highlightWrap div.highlight span {
   font-family: inherit;
 }

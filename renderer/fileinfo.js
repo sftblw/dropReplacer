@@ -29,7 +29,15 @@ function recordFileInfo(ev) {
     let matchingCount = 0;
     let files = ev.dataTransfer.files;
     for (let i = 0; i < files.length; i++) {
-      let fileName = path.parse(files[i].path).name;
+
+      // get filename to check
+      // TODO: refactor later (filename retriving would be in one place rather than spreaded)
+      let fileName = "";
+      if (uiinfo.regex.inputOption.isExtensionIncluded) {
+        fileName = path.parse(files[i].path).base;
+      } else {
+        fileName = path.parse(files[i].path).name;
+      }
 
       let regex = uiinfo.regex.inputRegex;
       let matchedInfo = fileName.match(regex);
