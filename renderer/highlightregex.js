@@ -3,21 +3,21 @@ window.addEventListener('load', (loadev) => {
     let areas = document.querySelectorAll('div.highlightWrap.inputRegex');
 
     for (let i = 0; i < areas.length; i++) {
-        let inputArea = areas[i].querySelector('input[type=\'text\']');
+        let inputArea = areas[i].querySelector('#inputRegex');
         let highlightArea = areas[i].querySelector('div.highlight');
 
-        inputArea.addEventListener('input', (ev) => {
-            let text = inputArea.value;
-            highlightArea.setAttribute('data-text', text);
-            GenInputRegexHTML(text, highlightArea);
-        });
-
-        // initialize
-        {
+        let inputHandler = () => {
             let text = inputArea.value;
             highlightArea.setAttribute('data-text', text);
             GenInputRegexHTML(text, highlightArea);
         }
+
+        inputArea.addEventListener('input', (ev) => {
+            inputHandler();
+        });
+
+        // initialize
+        inputHandler();
     }
 });
 
@@ -25,21 +25,21 @@ window.addEventListener('load', (loadev) => {
     let areas = document.querySelectorAll('div.highlightWrap.outputRegex');
 
     for (let i = 0; i < areas.length; i++) {
-        let inputArea = areas[i].querySelector('input[type=\'text\']');
+        let inputArea = areas[i].querySelector('#outputRegex');
         let highlightArea = areas[i].querySelector('div.highlight');
 
-        inputArea.addEventListener('input', (ev) => {
-            let text = inputArea.value;
-            highlightArea.setAttribute('data-text', text);
-            GenOutputRegexHTML(text, highlightArea);
-        });
-
-        // initialize
-        {
+        let outputHandler = () => {
             let text = inputArea.value;
             highlightArea.setAttribute('data-text', text);
             GenOutputRegexHTML(text, highlightArea);
         }
+
+        inputArea.addEventListener('input', (ev) => {
+            outputHandler();
+        });
+
+        // initialize
+        outputHandler();
     }
 });
 
