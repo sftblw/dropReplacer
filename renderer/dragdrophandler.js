@@ -19,5 +19,7 @@ window.addEventListener('load', (loadev) => {
         if (err) console.error(err);
       });
     }
+
+    uiinfo.history.add(uiinfo.regex.inputRegex, uiinfo.regex.outputRegex);
   });
 });

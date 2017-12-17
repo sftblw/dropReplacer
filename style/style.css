@@ -20,7 +20,7 @@ div.item {margin-bottom: .5em;}
   border: 2px solid lightgray;
 }
 
-.regex h2 { font-weight: normal; border-bottom: 1px solid lightgray; margin: .5em 0 .5em 0; }
+h2 { font-weight: normal; border-bottom: 1px solid lightgray; margin: .5em 0 .5em 0; }
 
 .regex label {display: block;}
 
@@ -70,3 +70,9 @@ div.item {margin-bottom: .5em;}
 .regex div.highlightWrap div.highlight span.match {
   color: darkorange;
 }
+
+.history ul { list-style: none; }
+.history ul li { display: block; overflow: hidden; }
+.history ul li a { display: inline-block; width: calc(100% - 4em); padding: .5em;  border: 1px solid grey;  text-decoration: none;}
+.history ul li input[type="button"] { float: right; height: 3em; width: 3em; }
+.history ul li .inputRegex, .history ul li .outputRegex { font-size: 1.1em; color: grey;padding: .5em;}

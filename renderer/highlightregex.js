@@ -1,29 +1,54 @@
 'use strict';
+
+function handleInput() {
+  let areas = document.querySelectorAll('div.highlightWrap.inputRegex');
+
+  for (let i = 0; i < areas.length; i++) {
+    let inputArea = areas[i].querySelector('#inputRegex');
+    let highlightArea = areas[i].querySelector('div.highlight');
+
+    let text = inputArea.value;
+    highlightArea.setAttribute('data-text', text);
+    GenInputRegexHTML(text, highlightArea);
+  }
+}
+
 window.addEventListener('load', (loadev) => {
-    let areas = document.querySelectorAll('div.highlightWrap.inputRegex');
+  let areas = document.querySelectorAll('div.highlightWrap.inputRegex');
+  
+  for (let i = 0; i < areas.length; i++) {
+    let inputArea = areas[i].querySelector('#inputRegex');
+    let highlightArea = areas[i].querySelector('div.highlight');
 
-    for (let i = 0; i < areas.length; i++) {
-        let inputArea = areas[i].querySelector('#inputRegex');
-        let highlightArea = areas[i].querySelector('div.highlight');
+    let inputHandler = () => {
+      let text = inputArea.value;
+      highlightArea.setAttribute('data-text', text);
+      GenInputRegexHTML(text, highlightArea);
+    };
 
-        let inputHandler = () => {
-            let text = inputArea.value;
-            highlightArea.setAttribute('data-text', text);
-            GenInputRegexHTML(text, highlightArea);
-        }
-
-        inputArea.addEventListener('input', (ev) => {
-            inputHandler();
-        });
-
-        // initialize
-        inputHandler();
-    }
+    inputArea.addEventListener('input', (ev) => {
+      inputHandler();
+    });
+  }
+  handleInput();
 });
+
+function handleOutput() {
+  let areas = document.querySelectorAll('div.highlightWrap.outputRegex');
+
+  for (let i = 0; i < areas.length; i++) {
+    let inputArea = areas[i].querySelector('#outputRegex');
+    let highlightArea = areas[i].querySelector('div.highlight');
+
+    let text = inputArea.value;
+    highlightArea.setAttribute('data-text', text);
+    GenOutputRegexHTML(text, highlightArea);
+  }
+}
 
 window.addEventListener('load', (loadev) => {
     let areas = document.querySelectorAll('div.highlightWrap.outputRegex');
-
+    
     for (let i = 0; i < areas.length; i++) {
         let inputArea = areas[i].querySelector('#outputRegex');
         let highlightArea = areas[i].querySelector('div.highlight');
@@ -33,15 +58,18 @@ window.addEventListener('load', (loadev) => {
             highlightArea.setAttribute('data-text', text);
             GenOutputRegexHTML(text, highlightArea);
         }
-
         inputArea.addEventListener('input', (ev) => {
             outputHandler();
         });
-
-        // initialize
-        outputHandler();
     }
+
+    handleOutput();
 });
+
+module.exports = {
+  handleInput: handleInput,
+  handleOutput: handleOutput
+};
 
 function GenInputRegexHTML(text, parent) {
     let elementList = [];
