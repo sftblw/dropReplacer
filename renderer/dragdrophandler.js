@@ -22,4 +22,6 @@ window.addEventListener('load', (loadev) => {
 
     uiinfo.history.add(uiinfo.regex.inputRegex, uiinfo.regex.outputRegex);
   });
+
+  uiinfo.history.recover();
 });
