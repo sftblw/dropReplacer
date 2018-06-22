@@ -10,7 +10,8 @@ packager({
   platform: 'win32',
   prune: true,
   ignore: /(build|.gitignore|.gidmodules|res_bin|task|doc)/,
-  icon: 'res_bin/dropReplacer_icon.ico'
+  icon: 'res_bin/dropReplacer_icon.ico',
+  appCopyright: 'copyright (c) Ch. aka sftblw. licensed under MIT'
 }, (err, appPaths) => {
   if (err) console.error(err);
   else console.info('npm run build:: Packaging done');
