@@ -6,15 +6,14 @@ Rename drag-dropped files by regular expression (regex).
 
 A simple electron app. currently tested only on windows.
 
-## todo
+## capability & todo list
 
-- [x] Basic oh basic feature
+- [x] dropReplacer the base
   - [x] drag-drop
   - [x] rename by regex
 - [ ] options
   - [x] include or exclude extension
-- [x] Show dragging files match info
-  - [ ] fix flickering number issues due to events of child elements
+- [ ] ~~Show dragging files match info~~ : not work: [chromium / electron issue](https://github.com/electron/electron/issues/9840)
 - [ ] Check regex
   - [ ] highlight regex
     - [x] brace
@@ -22,14 +21,13 @@ A simple electron app. currently tested only on windows.
   - [ ] is valid regex?
   - [ ] is valid file name?
   - [ ] escape invalid renaming rules to right ones
-- [ ] A neat progress bar
+- [ ] ~~A neat progress bar~~: is not needed
 - [x] Cleaner look
 - [ ] Log renamed files
-- [ ] Undo
-  - [ ] undo with main UI
-  - [ ] undo with Ctrl - Z
-- [ ] Resize images to fit below specific size?
+- [ ] ~~Undo~~: too complicated
+- [ ] Resize images to fit below specific size?: wishlist
 - [x] Icon for packaged binary
+- [ ] auto update
 
 ## dev
 
