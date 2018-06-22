@@ -1,47 +1,57 @@
 <!DOCTYPE html>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-D1DnElbKUB2lNtaRiI1wdrBi6qPDxL5oF8TldtN8o8U='">
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>dropReplacer</title>
-    <link rel="stylesheet" href="../style/style.css">
-  </head>
-  <body>
-    <h1><image class="logo" src="../images/dropReplacer_logo.png">Drag-drop files to rename</h1>
-    <div class="fileinfo">
-      <div class="item">
-        <ul>
-          <li><span class="dragging numb">0</span> files dragging over.</li>
-          <li><span class="matching numb">0</span> files match.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="regex">
-      <div class="item">
-        <h2>Input regular expression</h2>
-        <div class="highlightWrap inputRegex">
-          <pre><div class="highlight">(.*)</div></pre>
-          <input type="text" id="inputRegex" value="(.*)"/>
-        </div>
-        <ul class="option inputOption">
-          <li><label><input type="checkbox" class="isExtensionIncluded"/>include extension</label></li>
-        </ul>
-      </div>
-      <div class="item">
-        <h2>Output renaming rule</h2>
-        <div class="highlightWrap outputRegex">
-          <pre><div class="highlight">$1 (renamed)</div></pre>
-          <input type="text" id="outputRegex" value="$1 (renamed)"/>
-        </div>
-      </div>
-    </div>
-    <div class="history">
-      <h2>history</h2>
+
+<head>
+  <meta charset="UTF-8">
+  <title>dropReplacer</title>
+  <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+  <h1>
+    <image class="logo" src="../images/dropReplacer_logo.png">Drag-drop files to rename</h1>
+  <div class="fileinfo">
+    <div class="item">
       <ul>
+        <li>
+          <span class="dragging numb">0</span> files dragging over.</li>
+        <li>
+          <span class="matching numb">0</span> files match.</li>
       </ul>
     </div>
-  </body>
+  </div>
+  <div class="regex">
+    <div class="item">
+      <h2>Input regular expression</h2>
+      <div class="highlightWrap inputRegex">
+        <pre><div class="highlight">(.*)</div></pre>
+        <input type="text" id="inputRegex" value="(.*)" />
+      </div>
+      <ul class="option inputOption">
+        <li>
+          <label>
+            <input type="checkbox" class="isExtensionIncluded" />include extension</label>
+        </li>
+      </ul>
+    </div>
+    <div class="item">
+      <h2>Output renaming rule</h2>
+      <div class="highlightWrap outputRegex">
+        <pre><div class="highlight">$1 (renamed)</div></pre>
+        <input type="text" id="outputRegex" value="$1 (renamed)" />
+      </div>
+    </div>
+  </div>
+  <div class="history">
+    <h2>history</h2>
+    <ul>
+    </ul>
+  </div>
+</body>
 
-  <script>
-    require('../renderer/index.js')
-  </script>
+<script>
+  require('../renderer/index.js')
+</script>
+
 </html>

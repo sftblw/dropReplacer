@@ -2,29 +2,29 @@ const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
-let mainWindow;
+let win;
 
-function createWindow () {
-  mainWindow = new BrowserWindow({width: 600, height: 600});
+function createWindow() {
+  win = new BrowserWindow({ width: 600, height: 600 });
 
-  mainWindow.loadURL(`file://${__dirname}/view/index.html`);
-  
+  win.loadFile('view/index.html');
+
   // mainWindow.webContents.openDevTools()
 
-  mainWindow.on('closed', function () {
-    mainWindow = null;
+  win.on('closed', () => {
+    win = null;
   });
 }
 app.on('ready', createWindow);
 
-app.on('window-all-closed', function () {
+app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
 })
 
-app.on('activate', function () {
-  if (mainWindow === null) {
+app.on('activate', () => {
+  if (win === null) {
     createWindow();
   }
 });
