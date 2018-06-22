@@ -1,4 +1,4 @@
 'use strict';
-require('./fileinfo.js');
+// require('./fileinfo.js'); // electron / chromium change is required
 require('./dragdrophandler.js');
 require('./highlightregex.js');

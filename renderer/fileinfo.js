@@ -1,3 +1,10 @@
+// this will not happen in new chrome aka new electron.
+
+// reason: security (blink / webkit) which is not for electron :(
+
+// electron issue: https://github.com/electron/electron/issues/9840
+// s/o 2012: https://stackoverflow.com/a/9536533
+
 const path = require('path');
 const uiinfo = require('../lib/uiinfo.js');
 const dragdrophandler = require('./dragdrophandler.js');

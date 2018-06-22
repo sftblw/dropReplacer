@@ -4,11 +4,12 @@ const renamer = require('../lib/renamer.js');
 const uiinfo = require('../lib/uiinfo.js');
 
 window.addEventListener('load', (loadev) => {
-  document.addEventListener('dragover', (ev) => {
+  window.addEventListener('dragover', (ev) => {
     ev = ev || event;
     ev.preventDefault();
   });
-  document.addEventListener('drop', (ev) => {
+
+  window.addEventListener('drop', (ev) => {
     ev = ev || event;
     ev.preventDefault();
 
