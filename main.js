@@ -9,7 +9,7 @@ function createWindow() {
 
   win.loadFile('view/index.html');
 
-  // mainWindow.webContents.openDevTools()
+  // win.webContents.openDevTools()
 
   win.on('closed', () => {
     win = null;
