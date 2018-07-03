@@ -9,9 +9,11 @@
   },
   "author": "sftblw",
   "license": "MIT",
+  "dependencies": {
+    "electron-store": "^2.0.0"
+  },
   "devDependencies": {
     "electron": "^2.0.3",
-    "electron-packager": "^12.1.0",
-    "electron-store": "^2.0.0"
+    "electron-packager": "^12.1.0"
   }
 }
