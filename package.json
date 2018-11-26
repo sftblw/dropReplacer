@@ -1,6 +1,6 @@
 {
   "name": "dropreplacer",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "rename drag-dropped files by regex.",
   "main": "main.js",
   "scripts": {
