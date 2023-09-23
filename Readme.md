@@ -1,6 +1,10 @@
-# dropReplacer
+# moved to
 
-![showcase](./doc/showcase.gif)
+https://github.com/sftblw/drop-renamer
+
+same purpose, with tauri, not electron.
+
+# dropReplacer
 
 Rename drag-dropped files by regular expression (regex).
 
