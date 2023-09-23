@@ -1,4 +1,4 @@
-# moved to
+# obsolete; rebuilding it as:
 
 https://github.com/sftblw/drop-renamer
 
